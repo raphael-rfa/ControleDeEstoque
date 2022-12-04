@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ControleDeEstoque.Models.Produto>
+
+@{
+    ViewData["Title"] = "Tabela";
+}
+
+<div class="textHeader">
+    <h1>Tabela de produtos</h1>
+
+    <p>
+        <a asp-action="Create">Adicionar novo</a>
+    </p>
+</div>
+
+<form class="formIndex" asp-controller="Produtoes" asp-action="Index" method="get">
+    <select name="ordenar">
+        <option value="">Desordenado</option>
+        <option value="1">Crescente</option>
+        <option value="2">Decrescente</option>
+    </select>
+    <input id="priinput" type="text" name="searchString" placeholder="Search"/>
+    <input type="submit" value="Filtrar" />
+</form>
+<div style="overflow-x: auto;">
+    <table class="tabela" style="min-width: 660px;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QntProduzida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QntVendida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QntEstoque)
+            </th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QntProduzida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QntVendida)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QntEstoque)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+    </table>
+</div>

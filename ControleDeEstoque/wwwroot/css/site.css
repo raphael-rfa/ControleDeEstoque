@@ -1,0 +1,193 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0c424b;    
+}
+
+nav {
+    background-color: #0c424b;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+}
+
+nav a:hover{
+  font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+.logo{
+    width: 200px;
+    height: 100px;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.textHeader {
+    padding: 25px 0px;
+    margin: 25px 0px;
+    border-bottom: 1px solid #04AA6D;
+}
+
+.formIndex {
+    width: 100%;
+    text-align: left;
+    margin: 0px auto 40px;
+    line-height: 1.9em;
+}
+
+.formIndex input, select{
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #04AA6D;
+}
+
+#priinput {
+    width: 20%;
+    padding: 5px 40px;
+    transition: width 0.4s ease-in-out;
+    background-image: url(../imagens/search_FILL0_wght500_GRAD0_opsz40.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    outline: none;
+}
+
+#priinput:focus {
+    width: 60%;
+}
+
+.formIndex input[type=submit], subDelete {
+    background-color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.formIndex input[type=submit]:hover, subDelete:hover {
+    background-color: #04AA6D;
+    color: white;
+    font-weight: bold;
+}
+
+.tabela {
+    border-collapse: collapse;
+    width: 100%;    
+}
+
+.tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.tabela tr:nth-child(even){
+    background-color: #f2f2f2;
+
+}
+
+.tabela tr:hover {
+    background-color: #ddd
+}
+
+.tabela th, .tabela td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.formCreate{
+    font-size: 18px;
+    width: 300px;
+    margin: 30px 0px;    
+}
+
+.formCreate div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.formCreate label{
+    line-height: 1.7em;
+    font-weight: bold;
+}
+
+.formCreate input{
+    padding: 5px;
+    outline: none;
+}
+
+.dl {
+    line-height: 1.5em;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #04AA6D;
+}
+@media screen and (max-width: 1060px){
+    .main{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    nav, .formIndex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #priinput {
+        width: auto;
+        margin-top: 20px;
+    }
+    
+    #priinput:focus {
+        width: 100%;
+    }
+    
+    nav ul{
+        margin: 20px auto;
+    }
+}
+
+@media body and (max-height: 600px)
+{
+    footer{
+        position: relative;
+    }
+}

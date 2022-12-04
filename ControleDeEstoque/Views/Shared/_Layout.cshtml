@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Controle De Estoque</title>
+    <link rel="icon" type="image/x-icon" href="~/imagens/icon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="description" content="Controle de estoque simples, para calcular quantos itens deviam estar no estoque e ordenar por quantidade." />
+    <!--<link rel="canonical" href="">-->
+    <meta name="author" content="Raphael Francisco" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Controle de Estoque" />
+    <meta property="og:description" content="Controle de estoque simples, para calcular quantos itens deviam estar no estoque e ordenar por quantidade." />
+    <!--<meta property="og:url" content="" />-->
+    <meta property="og:site_name" content="Controle de Estoque" />
+    <!--<meta property="og:image" content="" />-->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="~/imagens/Logo.svg"/>
+            </div>
+            <ul >
+                <li>
+                    <a asp-controller="Produtoes" asp-action="index"><b>Home</b></a>
+                </li>
+                
+                <li>
+                    <a asp-controller="Produtoes" asp-action="create">Adicionar produto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        @RenderBody()
+    </div>
+    <footer>
+        <p>Feito por Raphael Francisco</p>
+        <a href="https://www.linkedin.com/in/raphael-rfa/" target="_blank">
+            <img src="~/imagens/GitHub-Mark-120px-plus.png" alt="" width="28" height="28" />
+        </a>
+        <a href="https://github.com/raphael-rfa" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+            width="28" height="28" />
+        </a>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
