@@ -41,7 +41,7 @@ namespace ControleDeEstoque
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Produtoes}/{action=Index}/{id?}");
+                pattern: "{controller=Produtoes}/{action=Create}/{id?}");
 
             app.Run();
         }
