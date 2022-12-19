@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleDeEstoque.Migrations
 {
     [DbContext(typeof(ControleDeEstoqueContext))]
-    [Migration("20221204185820_DBAzure")]
-    partial class DBAzure
+    [Migration("20221219015245_InitialCreateWithoutAzure")]
+    partial class InitialCreateWithoutAzure
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -10,7 +10,7 @@ namespace ControleDeEstoque
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<ControleDeEstoqueContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ControleDeEstoqueContext") ?? throw new InvalidOperationException("Connection string 'ControleDeEstoqueContext' not found.")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
